@@ -17,12 +17,12 @@ body {
 
 .flex_vertical_item {
   margin: 1px;
-  background: plum;
+  background: #dda0dd;
 }
 
 div.flex_vertical_item_pressed {
   margin: 1px;
-  background-color: paleturquoise;
+  background-color: #afeeee;
 }
 
 .popUpInfo {
@@ -34,4 +34,8 @@ div.flex_vertical_item_pressed {
 
 .settings {
   text-align: center;
+}
+
+#grid_size_num {
+  width: 50px;
 }

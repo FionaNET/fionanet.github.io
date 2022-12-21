@@ -1,4 +1,5 @@
 const max_size_grid_px = 700;
+
 function createEtchGrid() {
 
   const number = document.getElementById("grid_size_num")?.value;
@@ -75,13 +76,15 @@ function openWarning() {
 
 function changeEtchColor() {
   const color = document.getElementById("etch_color").value;
-  var header = getCSSRule('div.flex_vertical_item_pressed');
-  header.style.backgroundColor = color;
+  var etch_square = getCSSRule('div.flex_vertical_item_pressed');
+  etch_square.style.backgroundColor = color;
 }
-//Handlers
-document.getElementById("submit_grid_size")?.addEventListener('click', createEtchGrid);
-document.getElementById("error_ok").addEventListener('click', closeWarning);
-document.getElementById("etch_color").addEventListener('blur', changeEtchColor);
+
+function changeBackgroundColor() {
+  const color = document.getElementById("etch_background_color").value;
+  var background_square = getCSSRule('.flex_vertical_item');
+  background_square.style.backgroundColor = color;
+}
 
 function getCSSRule(selector) {
   selector = selector.toLowerCase();
@@ -97,3 +100,9 @@ function getCSSRule(selector) {
   });
   return result;
 }
+
+//Handlers
+document.getElementById("submit_grid_size")?.addEventListener('click', createEtchGrid);
+document.getElementById("error_ok").addEventListener('click', closeWarning);
+document.getElementById("etch_color").addEventListener('blur', changeEtchColor);
+document.getElementById("etch_background_color").addEventListener('blur', changeBackgroundColor);
