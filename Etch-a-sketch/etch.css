@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   gap: 1px white;
-  border: 5px black;
+  justify-content: center;
 }
 
 .flex_row_containers {
@@ -17,10 +17,17 @@
 }
 
 .flex_vertical_item:hover {
-  background: white;
+  background: paleturquoise;
 }
 
 div.flex_vertical_item_pressed {
   margin: 1px;
-  background: blue;
+  background: paleturquoise;
+}
+
+.popUpInfo {
+  color: red;
+  text-align: center;
+  margin: auto;
+  display: none;
 }

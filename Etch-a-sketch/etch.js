@@ -1,9 +1,9 @@
 const max_size_grid_px = 700;
-
 function createEtchGrid() {
 
   const number = document.getElementById("grid_size_num")?.value;
-  if ((number != null) && number < 100) {
+  if (number < 100 && number != "") {
+    closeWarning();
     const container = document.getElementById("container");
     empty(container);
     for (var i = 0; i < number; i++) {
@@ -36,7 +36,7 @@ function createEtchGrid() {
       });
     });
   } else {
-    //TODO: create popup to warn
+    openWarning();
   }
 }
 
@@ -45,6 +45,22 @@ function empty(parent) {
     parent.firstElementChild.remove();
   }
 }
+
+function closeWarning() {
+  const popup = document.querySelectorAll(".popUpInfo");
+  popup.forEach((item) => {
+    item.style.display = "none";
+  });
+}
+
+function openWarning() {
+  const popup = document.querySelectorAll(".popUpInfo");
+  popup.forEach((item) => {
+    item.style.display = "block";
+  });
+}
+
 //Handlers
 document.getElementById("submit_grid_size")?.addEventListener('click', createEtchGrid);
+document.getElementById("error_ok").addEventListener('click', closeWarning);
 

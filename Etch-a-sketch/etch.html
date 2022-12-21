@@ -18,9 +18,14 @@
   <div class="settings">
     <label class="label" id="size_label">Enter the grid size for your Etch!</label><br>
     <input type="number" name="grid-size" id="grid_size_num">
-    <input type="button" value="submit_grid_size" id="submit_grid_size">
+    <input type="button" value="Create" id="submit_grid_size">
   </div>
   <div class="container" id="container">
+  </div>
+
+  <div class="popUpInfo" id="popUpInfo_container">
+    <label class="popUpInfo">Invalid values entered for grid, must be below 100x100 </label>
+    <input class="popUpInfo" type="button" id="error_ok" value="Ok">
   </div>
   <script src="etch.js" async defer></script>
 </body>
