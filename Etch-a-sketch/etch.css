@@ -20,7 +20,7 @@
   background: white;
 }
 
-.flex_vertical_item_pressed {
+div.flex_vertical_item_pressed {
   margin: 1px;
   background: blue;
 }

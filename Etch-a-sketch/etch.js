@@ -27,7 +27,12 @@ function createEtchGrid() {
     etch_squares.forEach((etch_square) => {
       // and for each one we add a 'click' listener
       etch_square.addEventListener('click', () => {
-        etch_square.className = "flex_vertical_item_pressed";
+        if (etch_square.classList.contains("flex_vertical_item_pressed")) {
+          etch_square.classList.remove("flex_vertical_item_pressed");
+        } else {
+          etch_square.classList.add("flex_vertical_item_pressed");
+        }
+
       });
     });
   } else {
