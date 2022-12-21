@@ -1,7 +1,11 @@
+body {
+  background-color: rgb(237, 237, 237);
+}
+
 .container {
   display: flex;
   flex-direction: row;
-  gap: 1px white;
+  /* gap: 1px black; */
   justify-content: center;
 }
 
@@ -16,13 +20,9 @@
   background: plum;
 }
 
-.flex_vertical_item:hover {
-  background: paleturquoise;
-}
-
 div.flex_vertical_item_pressed {
   margin: 1px;
-  background: paleturquoise;
+  background-color: paleturquoise;
 }
 
 .popUpInfo {
@@ -30,4 +30,8 @@ div.flex_vertical_item_pressed {
   text-align: center;
   margin: auto;
   display: none;
+}
+
+.settings {
+  text-align: center;
 }
