@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 1px white;
+  border: 5px black;
+}
+
+.flex_row_containers {
+  display: flex;
+  flex-direction: column;
+  margin: 1px;
+}
+
+.flex_vertical_item {
+  margin: 1px;
+  background: plum;
+}
+
+.flex_vertical_item:hover {
+  background: white;
+}
+
+.flex_vertical_item_pressed {
+  margin: 1px;
+  background: blue;
+}
