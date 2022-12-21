@@ -23,35 +23,51 @@ function createEtchGrid() {
       container.appendChild(div);
     }
 
-    // Add event handlers for all of the etch squares
-    const etch_squares = document.querySelectorAll('.flex_vertical_item');
-    // To draw
-    // etch_squares.forEach((etch_square) => {
-    //   // and for each one we add a 'click' listener
-    //   etch_square.addEventListener('click', () => {
-    //     if (etch_square.classList.contains("flex_vertical_item_pressed")) {
-    //       etch_square.classList.remove("flex_vertical_item_pressed");
-    //     } else {
-    //       etch_square.classList.add("flex_vertical_item_pressed");
-    //     }
+    console.log(document.getElementById("draw_etch_mode").value);
+    if (document.getElementById("draw_etch_mode").value == "ETCH") {
+      etch();
+    } else {
+      draw();
+    }
 
-    //   });
-    // });
-
-    // To Etch
-    etch_squares.forEach((etch_square) => {
-      // and for each one we add a 'click' listener
-      etch_square.addEventListener('mouseover', () => {
-        if (!etch_square.classList.contains("flex_vertical_item_pressed")) {
-          etch_square.classList.add("flex_vertical_item_pressed");
-          etch_square.classList.remove("flex_vertical_item");
-        }
-
-      });
-    });
   } else {
     openWarning();
   }
+}
+
+function draw() {
+  // Add event handlers for all of the etch squares
+  const etch_squares = document.querySelectorAll('.flex_vertical_item');
+  // To draw
+  etch_squares.forEach((etch_square) => {
+    // and for each one we add a 'click' listener
+    etch_square.addEventListener('click', () => {
+      if (etch_square.classList.contains("flex_vertical_item_pressed")) {
+        etch_square.classList.remove("flex_vertical_item_pressed");
+        etch_square.classList.add("flex_vertical_item");
+      } else {
+        etch_square.classList.add("flex_vertical_item_pressed");
+        etch_square.classList.remove("flex_vertical_item");
+      }
+
+    });
+  });
+}
+
+function etch() {
+  // Add event handlers for all of the etch squares
+  const etch_squares = document.querySelectorAll('.flex_vertical_item');
+  // To Etch
+  etch_squares.forEach((etch_square) => {
+    // and for each one we add a 'click' listener
+    etch_square.addEventListener('mouseover', () => {
+      if (!etch_square.classList.contains("flex_vertical_item_pressed")) {
+        etch_square.classList.add("flex_vertical_item_pressed");
+        etch_square.classList.remove("flex_vertical_item");
+      }
+
+    });
+  });
 }
 
 function empty(parent) {
@@ -101,8 +117,39 @@ function getCSSRule(selector) {
   return result;
 }
 
+function toggleMode() {
+  switch_text = document.getElementById("draw_etch_mode");
+  if (switch_text.value == "DRAW") {
+    switch_text.value = "ETCH";
+  } else {
+    switch_text.value = "DRAW";
+  }
+
+}
+
+function darkMode() {
+
+  switch_text = document.getElementById("darkmode");
+  var body = getCSSRule('body');
+  var labels = getCSSRule('.label');
+
+  if (switch_text.value == "Dark mode") {
+    switch_text.value = "Light mode";
+    body.style.backgroundColor = "#ededed";
+    labels.style.color = "#000000";
+  } else {
+    switch_text.value = "Dark mode";
+    body.style.backgroundColor = "#303030";
+    labels.style.color = "#989898";
+  }
+
+
+
+}
 //Handlers
 document.getElementById("submit_grid_size")?.addEventListener('click', createEtchGrid);
 document.getElementById("error_ok").addEventListener('click', closeWarning);
 document.getElementById("etch_color").addEventListener('blur', changeEtchColor);
 document.getElementById("etch_background_color").addEventListener('blur', changeBackgroundColor);
+document.getElementById("draw_etch_mode").addEventListener('click', toggleMode);
+document.getElementById("darkmode").addEventListener('click', darkMode);
