@@ -15,20 +15,25 @@
 </head>
 
 <body>
-  <div class="settings">
-    <label class="label">Draw or Etch: </label>
-    <input type="button" id="draw_etch_mode" value="ETCH"><br>
-    <label class="label">Dark mode: </label>
-    <input type="button" id="darkmode" value="Dark mode"><br>
-    <label class="label" id="size_label">Grid size for etch: </label>
-    <input type="number" min="0" max="100" name="grid-size" id="grid_size_num" value="16">
-    <input type="button" value="Create" id="submit_grid_size"><br>
-    <label class="label" class="color-label">Pick etch color</label>
-    <input type="color" id="etch_color" value="#afeeee"><br>
-    <label class="label" class="color-label">Pick canvas color</label>
-    <input type="color" id="etch_background_color" value="#dda0dd"><br>
-  </div>
-  <div class="container" id="container">
+  <div class="main_window">
+    <div class="settings">
+      <label class="label">Draw or Etch: </label>
+      <input type="button" id="draw_etch_mode" value="ETCH"><br>
+      <label class="label">Dark mode: </label>
+      <input type="button" id="darkmode" value="Light mode"><br>
+      <label class="label" id="size_label">Grid size for etch: </label>
+      <input type="number" min="0" max="99" name="grid-size" id="grid_size_num" value="16"><br>
+      <label class="label" class="color-label">Pick etch color</label>
+      <input type="color" id="etch_color" value="#afeeee"><br>
+      <label class="label" class="color-label">Pick canvas color</label>
+      <input type="color" id="etch_background_color" value="#dda0dd"><br>
+      <input type="button" value="Create" id="submit_grid_size"><br>
+    </div>
+
+    <div class=flex_box_container>
+      <div class="container" id="container">
+      </div>
+    </div>
   </div>
 
   <div class="popUpInfo" id="popUpInfo_container">

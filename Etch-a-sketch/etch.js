@@ -23,7 +23,6 @@ function createEtchGrid() {
       container.appendChild(div);
     }
 
-    console.log(document.getElementById("draw_etch_mode").value);
     if (document.getElementById("draw_etch_mode").value == "ETCH") {
       etch();
     } else {
@@ -135,12 +134,12 @@ function darkMode() {
 
   if (switch_text.value == "Dark mode") {
     switch_text.value = "Light mode";
-    body.style.backgroundColor = "#ededed";
-    labels.style.color = "#000000";
-  } else {
-    switch_text.value = "Dark mode";
     body.style.backgroundColor = "#303030";
     labels.style.color = "#989898";
+  } else {
+    switch_text.value = "Dark mode";
+    body.style.backgroundColor = "#ededed";
+    labels.style.color = "#000000";
   }
 
 
