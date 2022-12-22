@@ -138,7 +138,7 @@ function darkMode() {
     // Turn on dark mode
     switch_text.value = "Light mode";
     body.style.backgroundColor = "#303030";
-    labels.style.color = "#989898";
+    labels.style.color = "#FFF";
     etch_container.style.backgroundColor = "#d7d7d7";
     header_title.style.color = "#FFF";
   } else {

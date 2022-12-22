@@ -78,14 +78,11 @@ div.flex_vertical_item_pressed {
 
 .label {
   color: black;
-  align-items: left;
-  padding: 20px;
-  margin: 20px;
-
+  /* padding: 20px 20px 20px 20px;
+  margin: 20px 20px 20px 20px; */
 }
 
 input {
   background-color: #d7d7d7;
   border: 0px;
-
 }
