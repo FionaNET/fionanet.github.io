@@ -9,16 +9,15 @@ body {
 .main_window {
   display: grid;
   grid-template-columns: calc(50% - 350px) 700px calc(50% - 350px);
-  grid-template-rows: calc(50vh - 350px) 700px calc(50vh - 350px);
+  grid-template-rows: minmax(100px, calc(50vh - 350px)) 700px calc(50vh - 350px);
   grid-template-areas: ". header ."" . maincontent ."". settings .";
 }
 
 /* Grid item 0 */
 .header_title {
   text-align: center;
-  font-size: 3vh;
+  font-size: 25px;
   font-weight: bold;
-
   /* grid-column-start: 2; */
   /* grid-row-start: 2;  */
   grid-area: header;
