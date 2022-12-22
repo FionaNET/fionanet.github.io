@@ -131,19 +131,24 @@ function darkMode() {
   switch_text = document.getElementById("darkmode");
   var body = getCSSRule('body');
   var labels = getCSSRule('.label');
+  var etch_container = getCSSRule('.flex_box_container');
+  var header_title = getCSSRule(".header_title");
 
   if (switch_text.value == "Dark mode") {
+    // Turn on dark mode
     switch_text.value = "Light mode";
     body.style.backgroundColor = "#303030";
     labels.style.color = "#989898";
+    etch_container.style.backgroundColor = "#d7d7d7";
+    header_title.style.color = "#FFF";
   } else {
+    // Turn on light mode
     switch_text.value = "Dark mode";
     body.style.backgroundColor = "#ededed";
     labels.style.color = "#000000";
+    etch_container.style.backgroundColor = "#FFF";
+    header_title.style.color = "#000";
   }
-
-
-
 }
 //Handlers
 document.getElementById("submit_grid_size")?.addEventListener('click', createEtchGrid);
@@ -152,3 +157,5 @@ document.getElementById("etch_color").addEventListener('blur', changeEtchColor);
 document.getElementById("etch_background_color").addEventListener('blur', changeBackgroundColor);
 document.getElementById("draw_etch_mode").addEventListener('click', toggleMode);
 document.getElementById("darkmode").addEventListener('click', darkMode);
+
+createEtchGrid(); //Create etch on startup

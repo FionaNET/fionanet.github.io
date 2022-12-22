@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Etch-A-Sketch</title>
+  <title>Etch & Sketch</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="etch.css">
@@ -16,18 +16,22 @@
 
 <body>
   <div class="main_window">
+    <div class="header_title">
+      <h1>Etch & Sketch</h1>
+    </div>
+
+
     <div class="settings">
-      <label class="label">Draw or Etch: </label>
+      <label class="label">Sketch or Etch: </label>
       <input type="button" id="draw_etch_mode" value="ETCH"><br>
-      <label class="label">Dark mode: </label>
-      <input type="button" id="darkmode" value="Light mode"><br>
-      <label class="label" id="size_label">Grid size for etch: </label>
+      <label class="label" id="size_label">Grid size </label>
       <input type="number" min="0" max="99" name="grid-size" id="grid_size_num" value="16"><br>
-      <label class="label" class="color-label">Pick etch color</label>
+      <label class="label" class="color-label">Pen color</label>
       <input type="color" id="etch_color" value="#afeeee"><br>
-      <label class="label" class="color-label">Pick canvas color</label>
+      <label class="label" class="color-label">Canvas color</label>
       <input type="color" id="etch_background_color" value="#dda0dd"><br>
       <input type="button" value="Create" id="submit_grid_size"><br>
+      <input type="button" id="darkmode" value="Dark mode"><br>
     </div>
 
     <div class=flex_box_container>
