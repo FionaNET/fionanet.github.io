@@ -64,13 +64,6 @@ div.flex_vertical_item_pressed {
   box-shadow: inset 0px 0px 0px 1px white;
 }
 
-.popUpInfo {
-  color: red;
-  text-align: center;
-  margin: auto;
-  display: none;
-}
-
 #grid_size_num {
   width: 50px;
 }

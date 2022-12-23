@@ -4,7 +4,6 @@ function createEtchGrid() {
 
   const number = document.getElementById("grid_size_num")?.value;
   if (number < 100 && number != "") {
-    closeWarning();
     const container = document.getElementById("container");
     empty(container);
     for (var i = 0; i < number; i++) {
@@ -30,7 +29,7 @@ function createEtchGrid() {
     }
 
   } else {
-    openWarning();
+    alert("Max is 99x99");
   }
 }
 
@@ -73,20 +72,6 @@ function empty(parent) {
   while (parent.firstElementChild) {
     parent.firstElementChild.remove();
   }
-}
-
-function closeWarning() {
-  const popup = document.querySelectorAll(".popUpInfo");
-  popup.forEach((item) => {
-    item.style.display = "none";
-  });
-}
-
-function openWarning() {
-  const popup = document.querySelectorAll(".popUpInfo");
-  popup.forEach((item) => {
-    item.style.display = "block";
-  });
 }
 
 function changeEtchColor() {
@@ -152,7 +137,6 @@ function darkMode() {
 }
 //Handlers
 document.getElementById("submit_grid_size")?.addEventListener('click', createEtchGrid);
-document.getElementById("error_ok").addEventListener('click', closeWarning);
 document.getElementById("etch_color").addEventListener('blur', changeEtchColor);
 document.getElementById("etch_background_color").addEventListener('blur', changeBackgroundColor);
 document.getElementById("draw_etch_mode").addEventListener('click', toggleMode);
