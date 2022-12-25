@@ -9,7 +9,7 @@ body {
 .main_window {
   display: grid;
   grid-template-columns: calc(50% - 350px) 700px calc(50% - 350px);
-  grid-template-rows: minmax(100px, calc(50vh - 350px)) 700px calc(50vh - 350px);
+  grid-template-rows: auto 700px auto;
   grid-template-areas: ". header ."" . maincontent ."". settings .";
 }
 
@@ -42,7 +42,7 @@ body {
   grid-area: maincontent;
 }
 
-.container {
+.etch-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -77,4 +77,14 @@ div.flex_vertical_item_pressed {
 input {
   background-color: #d7d7d7;
   border: 0px;
+}
+
+.setting_buttons_end {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+  /* grid-template-columns: auto auto;
+  grid-template-rows: 100%;
+  grid-template-areas: "submit_grid_size darkmode"; */
 }

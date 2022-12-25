@@ -4,7 +4,7 @@ function createEtchGrid() {
 
   const number = document.getElementById("grid_size_num")?.value;
   if (number < 100 && number != "") {
-    const container = document.getElementById("container");
+    const container = document.getElementById("etch-container");
     empty(container);
     for (var i = 0; i < number; i++) {
       // Each row should also be a flex container that spans downwards
@@ -114,6 +114,7 @@ function toggleMode() {
 function darkMode() {
 
   switch_text = document.getElementById("darkmode");
+  var main_container = document.querySelector(".container-fluid");
   var body = getCSSRule('body');
   var labels = getCSSRule('.label');
   var etch_container = getCSSRule('.flex_box_container');
@@ -122,14 +123,14 @@ function darkMode() {
   if (switch_text.value == "Dark mode") {
     // Turn on dark mode
     switch_text.value = "Light mode";
-    body.style.backgroundColor = "#303030";
+    main_container.style.backgroundColor = "#303030";
     labels.style.color = "#FFF";
     etch_container.style.backgroundColor = "#d7d7d7";
     header_title.style.color = "#FFF";
   } else {
     // Turn on light mode
     switch_text.value = "Dark mode";
-    body.style.backgroundColor = "#ededed";
+    main_container.style.backgroundColor = "#FFF";
     labels.style.color = "#000000";
     etch_container.style.backgroundColor = "#FFF";
     header_title.style.color = "#000";
