@@ -4,7 +4,7 @@ header_div.innerHTML = `
     <ul class="nav nav-pills">
         <li class="nav-item"><a href="../index.html" class="nav-link" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="/Etch-a-sketch/index.html" class="nav-link">Etch & Sketch</a></li>
-        <li class="nav-item"><a href="https://github.com/FionaNET/Csharp---FSM" class="nav-link">[GitHub Project] C# - FSM</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">WIP</a></li>
         <li class="nav-item"><a href="#" class="nav-link">WIP</a></li>
         <li class="nav-item"><a href="#" class="nav-link">WIP</a></li>
       </ul>
