@@ -4,7 +4,7 @@ header_div.innerHTML = `
     <ul class="nav nav-pills">
         <li class="nav-item"><a href="../index.html" class="nav-link" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="/Etch-a-sketch/index.html" class="nav-link">Etch & Sketch</a></li>
-        <li class="nav-item"><a href="http://ec2-54-79-141-149.ap-southeast-2.compute.amazonaws.com:5500/index.html" class="nav-link"> Auckland Weather Station </a></li>
+        <li class="nav-item"><a href="http://ec2-3-27-70-93.ap-southeast-2.compute.amazonaws.com:5500/index.html" class="nav-link"> Auckland Weather Station </a></li>
         <li class="nav-item"><a href="#" class="nav-link">WIP</a></li>
         <li class="nav-item"><a href="#" class="nav-link">WIP</a></li>
       </ul>
