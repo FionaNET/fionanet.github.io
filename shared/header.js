@@ -5,8 +5,6 @@ header_div.innerHTML = `
         <li class="nav-item"><a href="../index.html" class="nav-link" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="/Etch-a-sketch/index.html" class="nav-link">Etch & Sketch</a></li>
         <li class="nav-item"><a href="/WeatherStation/index.html" class="nav-link"> [Preview] Weather Station </a></li>
-        <li class="nav-item"><a href="#" class="nav-link">WIP</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">WIP</a></li>
       </ul>
     </header>
 `;
